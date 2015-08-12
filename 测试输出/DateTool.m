@@ -14,24 +14,28 @@
 
 + (NSArray *)dateArray:(NSString *)startDate EndDate:(NSString *)endDate
 {
-
     NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
     fmt.dateFormat = @"YYYY-MM-dd HH:mm:ss";
     // NSString --> NSDate
     NSDate *StartDate = [fmt dateFromString:startDate];
     NSDate *EndDate = [fmt dateFromString:endDate];
+    NSTimeInterval timeInterval = [StartDate timeIntervalSinceDate:EndDate];
+    
+    NSInteger days = ((int)timeInterval)/(3600*24);
     
     // 计算两个日期之间的差值
     NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSCalendarUnit unit = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
-    NSDateComponents *cmps = [calendar components:unit
-                                         fromDate:StartDate
-                                           toDate:EndDate
-                                          options:0];
+//    NSCalendarUnit unit = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
+//    NSDateComponents *cmps = [calendar components:unit
+//                                         fromDate:StartDate
+//                                           toDate:EndDate
+//                                          options:0];
+//    
+//
+//    NSInteger cmpsDay = cmps.day;
+    NSInteger cmpsDay = labs(days);
     
-
-    NSInteger cmpsDay = cmps.day;
-    cmps = [NSDateComponents new];
+    NSDateComponents *cmps = [NSDateComponents new];
     
     NSMutableArray *dateMutableArray = [[NSMutableArray alloc]init];
     fmt.dateFormat = @"YYYY-MM-dd";
@@ -56,8 +60,5 @@
 
     return mDate;
 }
-
-         
-
 
 @end

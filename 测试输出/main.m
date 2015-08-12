@@ -63,12 +63,18 @@ void compareNSString(){
 }
 
 void printDate(){
-    NSArray *array = [DateTool dateArray:@"2012-02-26 14:15:17" EndDate:@"2012-03-06 14:15:17"];
+    NSArray *array = [DateTool dateArray:@"2014-07-15 14:15:17" EndDate:@"2015-07-15 14:15:17"];
     for (NSString *date in array) {
         NSLog(@"%@",date);
     }
 }
 
+void testMutableArray(){
+    NSArray *array = [[NSArray alloc]initWithObjects:@"1",@"2",@"3",nil];
+    NSMutableArray *mutableArray = [[NSMutableArray alloc]initWithArray:array];//array;
+    [mutableArray addObject:@"4"];
+    NSLog(@"array's address is:%@",mutableArray);
+}
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -77,7 +83,8 @@ int main(int argc, const char * argv[]) {
         //randomBigWheel();
         //RegEx();
         //compareNSString();
-        printDate();
+        //printDate();
+        //testMutableArray();
     }
     return 0;
 }
