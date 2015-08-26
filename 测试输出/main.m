@@ -76,6 +76,39 @@ void testMutableArray(){
     NSLog(@"array's address is:%@",mutableArray);
 }
 
+void JzbTest(){
+    NSString *money = @"147.99";
+    NSNumber *num=[NSNumber numberWithFloat:money.floatValue];
+    
+    NSString *str=[NSString stringWithFormat:@"%.2f",num.floatValue];
+    NSLog(@"%@",str);
+}
+
+void test1(){
+    char string[10];
+    
+    char *str1 = "012345678";
+    strcpy(string, str1);
+}
+
+void test2(){
+    int i;
+    char string[10],str1[10];
+    for (i=0; i<10; i++) {
+        str1[i] = 'a';
+    }
+    str1;
+    strcpy(string, str1);
+    string;
+}
+
+void test3(char *str1){
+    char string[10];
+    if (strlen(str1)<10) {
+        strcpy(string, str1);
+    }
+}
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         //stringMutableCopy();
@@ -85,6 +118,10 @@ int main(int argc, const char * argv[]) {
         //compareNSString();
         //printDate();
         //testMutableArray();
+        //JzbTest();
+        //test1();
+        //test2();
+        //test3("0123456789");
     }
     return 0;
 }
