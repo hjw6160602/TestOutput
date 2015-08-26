@@ -97,9 +97,9 @@ void test2(){
     for (i=0; i<10; i++) {
         str1[i] = 'a';
     }
-    str1;
+//    str1;
     strcpy(string, str1);
-    string;
+//    string;
 }
 
 void test3(char *str1){
@@ -108,6 +108,62 @@ void test3(char *str1){
         strcpy(string, str1);
     }
 }
+
+void dateArray(){
+    NSString* startDate = @"2014-07-15 00:00:00";
+    NSString* endDate = @"2014-08-15 00:00:00";
+    NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
+    fmt.dateFormat = @"YYYY-MM-dd HH:mm:ss";
+    // NSString --> NSDate
+    NSDate *StartDate = [fmt dateFromString:startDate];
+    NSDate *EndDate = [fmt dateFromString:endDate];
+    NSTimeInterval timeInterval = [StartDate timeIntervalSinceDate:EndDate];
+    
+    NSInteger days = ((int)timeInterval)/(3600*24);
+    
+    // 计算两个日期之间的差值
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    //    NSCalendarUnit unit = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
+    //    NSDateComponents *cmps = [calendar components:unit
+    //                                         fromDate:StartDate
+    //                                           toDate:EndDate
+    //                                          options:0];
+    //
+    //
+    //    NSInteger cmpsDay = cmps.day;
+    NSInteger cmpsDay = labs(days);
+    
+    NSDateComponents *cmps = [NSDateComponents new];
+    
+    NSMutableArray *dateMutableArray = [[NSMutableArray alloc]init];
+    fmt.dateFormat = @"YYYY-MM-dd";
+    [dateMutableArray addObject:[fmt stringFromDate:StartDate]];
+    
+    for (NSInteger i=1; i<=cmpsDay; i++){
+        
+        cmps.day=i;
+        NSDate *temp_Date = [calendar dateByAddingComponents:cmps toDate:StartDate options:0];
+        NSString *tempDateStr = [fmt stringFromDate:temp_Date];
+        [dateMutableArray addObject:tempDateStr];
+    }
+    NSArray *dateArray = [dateMutableArray copy];
+    NSLog(@"%@",dateArray);
+}
+
+void DateTest(){
+    NSDateFormatter *fmt = [[NSDateFormatter alloc]init];
+    fmt.dateFormat = @"YYYY-MM-dd";
+    NSDate *Nowtime = [fmt dateFromString:@"2015-08-26"];
+    NSDate *CurrentDate = [NSDate date];
+    NSTimeZone *Zone = [NSTimeZone systemTimeZone];
+    NSInteger interval = [Zone secondsFromGMTForDate: CurrentDate];
+    NSDate *PhoneDate = [CurrentDate dateByAddingTimeInterval:interval];
+    NSDate *resultNowTime = [Nowtime dateByAddingTimeInterval:interval];
+
+    NSLog(@"");
+}
+
+
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -122,9 +178,13 @@ int main(int argc, const char * argv[]) {
         //test1();
         //test2();
         //test3("0123456789");
+        //dateArray();
+        DateTest();
+
     }
     return 0;
 }
+
 
 
 

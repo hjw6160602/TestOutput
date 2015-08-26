@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		78693EC61B6B7186008B6EFB /* DateTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 78693EC51B6B7186008B6EFB /* DateTool.m */; };
 		78EE10DB1B05F8B9005D188F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 78EE10DA1B05F8B9005D188F /* main.m */; };
-		78EE10E31B05FABD005D188F /* NSString+GBLength.m in Sources */ = {isa = PBXBuildFile; fileRef = 78EE10E21B05FABD005D188F /* NSString+GBLength.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,12 +23,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		78693EC41B6B7186008B6EFB /* DateTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateTool.h; sourceTree = "<group>"; };
-		78693EC51B6B7186008B6EFB /* DateTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateTool.m; sourceTree = "<group>"; };
+		781D8C891B8D964900915D59 /* DateTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateTool.h; sourceTree = "<group>"; };
+		781D8C8A1B8D964900915D59 /* DateTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateTool.m; sourceTree = "<group>"; };
+		781D8C8C1B8D964900915D59 /* NSString+GBLength.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+GBLength.h"; sourceTree = "<group>"; };
+		781D8C8D1B8D964900915D59 /* NSString+GBLength.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+GBLength.m"; sourceTree = "<group>"; };
 		78EE10D71B05F8B9005D188F /* 测试输出 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "测试输出"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78EE10DA1B05F8B9005D188F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		78EE10E11B05FABD005D188F /* NSString+GBLength.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+GBLength.h"; sourceTree = "<group>"; };
-		78EE10E21B05FABD005D188F /* NSString+GBLength.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+GBLength.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,13 +42,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		781785C71B3AB1180006C098 /* GBLength【中英混合】 */ = {
+		781D8C881B8D964900915D59 /* DateTool【输出日期】 */ = {
 			isa = PBXGroup;
 			children = (
-				78EE10E11B05FABD005D188F /* NSString+GBLength.h */,
-				78EE10E21B05FABD005D188F /* NSString+GBLength.m */,
+				781D8C891B8D964900915D59 /* DateTool.h */,
+				781D8C8A1B8D964900915D59 /* DateTool.m */,
 			);
-			name = "GBLength【中英混合】";
+			path = "DateTool【输出日期】";
+			sourceTree = "<group>";
+		};
+		781D8C8B1B8D964900915D59 /* GBLength【中英混合】 */ = {
+			isa = PBXGroup;
+			children = (
+				781D8C8C1B8D964900915D59 /* NSString+GBLength.h */,
+				781D8C8D1B8D964900915D59 /* NSString+GBLength.m */,
+			);
+			path = "GBLength【中英混合】";
 			sourceTree = "<group>";
 		};
 		78EE10CE1B05F8B9005D188F = {
@@ -72,9 +79,8 @@
 		78EE10D91B05F8B9005D188F /* 测试输出 */ = {
 			isa = PBXGroup;
 			children = (
-				78693EC41B6B7186008B6EFB /* DateTool.h */,
-				78693EC51B6B7186008B6EFB /* DateTool.m */,
-				781785C71B3AB1180006C098 /* GBLength【中英混合】 */,
+				781D8C881B8D964900915D59 /* DateTool【输出日期】 */,
+				781D8C8B1B8D964900915D59 /* GBLength【中英混合】 */,
 				78EE10DA1B05F8B9005D188F /* main.m */,
 			);
 			path = "测试输出";
@@ -136,8 +142,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78EE10E31B05FABD005D188F /* NSString+GBLength.m in Sources */,
-				78693EC61B6B7186008B6EFB /* DateTool.m in Sources */,
 				78EE10DB1B05F8B9005D188F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
