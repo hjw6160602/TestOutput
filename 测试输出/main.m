@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DateTool.h"
 
 #pragma - 字符串的mutableCopy方法
 void stringMutableCopy(){
@@ -60,13 +59,6 @@ void compareNSString(){
     //NSOrderedDescending = 1;
     NSComparisonResult result =  [@"3.0.0.2" compare:@"3.0.1"];
     NSLog(@"%ld",(long)result);
-}
-
-void printDate(){
-    NSArray *array = [DateTool dateArray:@"2014-07-15 14:15:17" EndDate:@"2015-07-15 14:15:17"];
-    for (NSString *date in array) {
-        NSLog(@"%@",date);
-    }
 }
 
 void testMutableArray(){
@@ -163,7 +155,22 @@ void DateTest(){
     NSLog(@"");
 }
 
-
+void getNowDateFromatAnDate(){
+    NSDate *anyDate = [NSDate date];
+    //设置源日期时区
+    NSTimeZone* sourceTimeZone = [NSTimeZone timeZoneWithAbbreviation:@"GMT"];//或GMT
+    //设置转换后的目标日期时区
+    NSTimeZone* destinationTimeZone = [NSTimeZone localTimeZone];
+    //得到源日期与世界标准时间的偏移量
+    NSInteger sourceGMTOffset = [sourceTimeZone secondsFromGMTForDate:anyDate];
+    //目标日期与本地时区的偏移量
+    NSInteger destinationGMTOffset = [destinationTimeZone secondsFromGMTForDate:anyDate];
+    //得到时间偏移量的差值
+    NSTimeInterval interval = destinationGMTOffset - sourceGMTOffset;
+    //转为现在时间
+    NSDate* destinationDateNow = [[[NSDate alloc] initWithTimeInterval:interval sinceDate:anyDate] autorelease];
+    NSLog(@"%@", destinationDateNow);
+}
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -179,7 +186,8 @@ int main(int argc, const char * argv[]) {
         //test2();
         //test3("0123456789");
         //dateArray();
-        DateTest();
+        getNowDateFromatAnDate();
+        //DateTest();
 
     }
     return 0;

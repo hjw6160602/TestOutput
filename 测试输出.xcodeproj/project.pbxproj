@@ -23,8 +23,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		781D8C891B8D964900915D59 /* DateTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateTool.h; sourceTree = "<group>"; };
-		781D8C8A1B8D964900915D59 /* DateTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateTool.m; sourceTree = "<group>"; };
 		781D8C8C1B8D964900915D59 /* NSString+GBLength.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+GBLength.h"; sourceTree = "<group>"; };
 		781D8C8D1B8D964900915D59 /* NSString+GBLength.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+GBLength.m"; sourceTree = "<group>"; };
 		78EE10D71B05F8B9005D188F /* 测试输出 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "测试输出"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,8 +43,6 @@
 		781D8C881B8D964900915D59 /* DateTool【输出日期】 */ = {
 			isa = PBXGroup;
 			children = (
-				781D8C891B8D964900915D59 /* DateTool.h */,
-				781D8C8A1B8D964900915D59 /* DateTool.m */,
 			);
 			path = "DateTool【输出日期】";
 			sourceTree = "<group>";
