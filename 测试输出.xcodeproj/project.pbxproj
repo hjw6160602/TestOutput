@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		78CAE5201B9FCAC2006869CD /* NSString+HexStringFromString.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CAE51F1B9FCAC2006869CD /* NSString+HexStringFromString.m */; };
 		78EE10DB1B05F8B9005D188F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 78EE10DA1B05F8B9005D188F /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -23,8 +24,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		781D8C8C1B8D964900915D59 /* NSString+GBLength.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+GBLength.h"; sourceTree = "<group>"; };
-		781D8C8D1B8D964900915D59 /* NSString+GBLength.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+GBLength.m"; sourceTree = "<group>"; };
+		78CAE5181B9FCA8F006869CD /* NSString+GBLength.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+GBLength.h"; sourceTree = "<group>"; };
+		78CAE5191B9FCA8F006869CD /* NSString+GBLength.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+GBLength.m"; sourceTree = "<group>"; };
+		78CAE51C1B9FCA8F006869CD /* DateTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateTool.h; sourceTree = "<group>"; };
+		78CAE51D1B9FCA8F006869CD /* DateTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateTool.m; sourceTree = "<group>"; };
+		78CAE51E1B9FCAC2006869CD /* NSString+HexStringFromString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HexStringFromString.h"; sourceTree = "<group>"; };
+		78CAE51F1B9FCAC2006869CD /* NSString+HexStringFromString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HexStringFromString.m"; sourceTree = "<group>"; };
 		78EE10D71B05F8B9005D188F /* 测试输出 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "测试输出"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78EE10DA1B05F8B9005D188F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -40,20 +45,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		781D8C881B8D964900915D59 /* DateTool【输出日期】 */ = {
+		78CAE5161B9FCA8F006869CD /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				78CAE5171B9FCA8F006869CD /* NSString */,
 			);
-			path = "DateTool【输出日期】";
+			path = Category;
 			sourceTree = "<group>";
 		};
-		781D8C8B1B8D964900915D59 /* GBLength【中英混合】 */ = {
+		78CAE5171B9FCA8F006869CD /* NSString */ = {
 			isa = PBXGroup;
 			children = (
-				781D8C8C1B8D964900915D59 /* NSString+GBLength.h */,
-				781D8C8D1B8D964900915D59 /* NSString+GBLength.m */,
+				78CAE5181B9FCA8F006869CD /* NSString+GBLength.h */,
+				78CAE5191B9FCA8F006869CD /* NSString+GBLength.m */,
+				78CAE51E1B9FCAC2006869CD /* NSString+HexStringFromString.h */,
+				78CAE51F1B9FCAC2006869CD /* NSString+HexStringFromString.m */,
 			);
-			path = "GBLength【中英混合】";
+			path = NSString;
+			sourceTree = "<group>";
+		};
+		78CAE51A1B9FCA8F006869CD /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				78CAE51B1B9FCA8F006869CD /* DateTool【输出日期】 */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		78CAE51B1B9FCA8F006869CD /* DateTool【输出日期】 */ = {
+			isa = PBXGroup;
+			children = (
+				78CAE51C1B9FCA8F006869CD /* DateTool.h */,
+				78CAE51D1B9FCA8F006869CD /* DateTool.m */,
+			);
+			path = "DateTool【输出日期】";
 			sourceTree = "<group>";
 		};
 		78EE10CE1B05F8B9005D188F = {
@@ -75,8 +100,8 @@
 		78EE10D91B05F8B9005D188F /* 测试输出 */ = {
 			isa = PBXGroup;
 			children = (
-				781D8C881B8D964900915D59 /* DateTool【输出日期】 */,
-				781D8C8B1B8D964900915D59 /* GBLength【中英混合】 */,
+				78CAE5161B9FCA8F006869CD /* Category */,
+				78CAE51A1B9FCA8F006869CD /* Tool */,
 				78EE10DA1B05F8B9005D188F /* main.m */,
 			);
 			path = "测试输出";
@@ -139,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78EE10DB1B05F8B9005D188F /* main.m in Sources */,
+				78CAE5201B9FCAC2006869CD /* NSString+HexStringFromString.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

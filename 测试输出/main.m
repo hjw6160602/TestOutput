@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DateTool.h"
+#import "NSString+HexStringFromString.h"
 
 #pragma - 字符串的mutableCopy方法
 void stringMutableCopy(){
@@ -158,7 +160,7 @@ void DateTest(){
 void getNowDateFromatAnDate(){
     NSDate *anyDate = [NSDate date];
     //设置源日期时区
-    NSTimeZone* sourceTimeZone = [NSTimeZone timeZoneWithAbbreviation:@"GMT"];//或GMT
+    NSTimeZone* sourceTimeZone = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];//或GMT
     //设置转换后的目标日期时区
     NSTimeZone* destinationTimeZone = [NSTimeZone localTimeZone];
     //得到源日期与世界标准时间的偏移量
@@ -186,9 +188,11 @@ int main(int argc, const char * argv[]) {
         //test2();
         //test3("0123456789");
         //dateArray();
-        getNowDateFromatAnDate();
+        //getNowDateFromatAnDate();
         //DateTest();
-
+//        if([DateTool compareDateWithString:@"2015-08-27" Now:@"2015-08-27"]) NSLog(@"YES");
+//        else  NSLog(@"NO");
+        NSLog(@"%@",[NSString hexStringFromString:@"http://openapi.ele.me/v2/restaurants/?consumer_key=7284397484&timestamp=13749080544d31ba58fd73c71db697ab5e4946d52d"]);
     }
     return 0;
 }
