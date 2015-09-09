@@ -78,6 +78,7 @@ void JzbTest(){
     NSLog(@"%@",str);
 }
 
+/** 贝思客笔试题目:找错 */
 void test1(){
     char string[10];
     
