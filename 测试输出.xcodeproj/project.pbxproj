@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		788BC4671BC7B7F900D295E1 /* FaceExam.m in Sources */ = {isa = PBXBuildFile; fileRef = 788BC4661BC7B7F900D295E1 /* FaceExam.m */; };
 		78CAE5201B9FCAC2006869CD /* NSString+HexStringFromString.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CAE51F1B9FCAC2006869CD /* NSString+HexStringFromString.m */; };
 		78EE10DB1B05F8B9005D188F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 78EE10DA1B05F8B9005D188F /* main.m */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		788BC4651BC7B7F900D295E1 /* FaceExam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceExam.h; sourceTree = "<group>"; };
+		788BC4661BC7B7F900D295E1 /* FaceExam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceExam.m; sourceTree = "<group>"; };
 		78CAE5181B9FCA8F006869CD /* NSString+GBLength.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+GBLength.h"; sourceTree = "<group>"; };
 		78CAE5191B9FCA8F006869CD /* NSString+GBLength.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+GBLength.m"; sourceTree = "<group>"; };
 		78CAE51C1B9FCA8F006869CD /* DateTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateTool.h; sourceTree = "<group>"; };
@@ -45,6 +48,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		788BC4641BC7B7E200D295E1 /* FaceExam */ = {
+			isa = PBXGroup;
+			children = (
+				788BC4651BC7B7F900D295E1 /* FaceExam.h */,
+				788BC4661BC7B7F900D295E1 /* FaceExam.m */,
+			);
+			path = FaceExam;
+			sourceTree = "<group>";
+		};
 		78CAE5161B9FCA8F006869CD /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +112,7 @@
 		78EE10D91B05F8B9005D188F /* 测试输出 */ = {
 			isa = PBXGroup;
 			children = (
+				788BC4641BC7B7E200D295E1 /* FaceExam */,
 				78CAE5161B9FCA8F006869CD /* Category */,
 				78CAE51A1B9FCA8F006869CD /* Tool */,
 				78EE10DA1B05F8B9005D188F /* main.m */,
@@ -164,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78EE10DB1B05F8B9005D188F /* main.m in Sources */,
+				788BC4671BC7B7F900D295E1 /* FaceExam.m in Sources */,
 				78CAE5201B9FCAC2006869CD /* NSString+HexStringFromString.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
