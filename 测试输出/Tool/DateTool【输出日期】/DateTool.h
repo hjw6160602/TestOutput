@@ -13,4 +13,8 @@
 @interface DateTool : NSObject
 /** 给出两个字符串并比较大小，如从小到大返回 YES */
 + (BOOL)compareDateWithString:(NSString *)Time1 Now:(NSString *)Time2;
++ (void)dateArray;
++ (void)DateTest;
++ (void)getNowDateFromatAnDate;
+
 @end

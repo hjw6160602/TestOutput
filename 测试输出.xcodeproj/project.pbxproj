@@ -25,6 +25,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		78160B101BC8A94B00F39532 /* SORT.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SORT.h; sourceTree = "<group>"; };
+		78160B111BC8A94B00F39532 /* SORT.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SORT.m; sourceTree = "<group>"; };
 		788BC4651BC7B7F900D295E1 /* FaceExam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceExam.h; sourceTree = "<group>"; };
 		788BC4661BC7B7F900D295E1 /* FaceExam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceExam.m; sourceTree = "<group>"; };
 		78CAE5181B9FCA8F006869CD /* NSString+GBLength.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+GBLength.h"; sourceTree = "<group>"; };
@@ -48,6 +50,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		78160B0F1BC8A94B00F39532 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				78160B101BC8A94B00F39532 /* SORT.h */,
+				78160B111BC8A94B00F39532 /* SORT.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		788BC4641BC7B7E200D295E1 /* FaceExam */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +123,7 @@
 		78EE10D91B05F8B9005D188F /* 测试输出 */ = {
 			isa = PBXGroup;
 			children = (
+				78160B0F1BC8A94B00F39532 /* Classes */,
 				788BC4641BC7B7E200D295E1 /* FaceExam */,
 				78CAE5161B9FCA8F006869CD /* Category */,
 				78CAE51A1B9FCA8F006869CD /* Tool */,
@@ -146,7 +158,7 @@
 		78EE10CF1B05F8B9005D188F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = SaiDicaprio;
 				TargetAttributes = {
 					78EE10D61B05F8B9005D188F = {
@@ -205,6 +217,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
