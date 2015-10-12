@@ -11,6 +11,7 @@
 #import "DateTool.h"
 #import "FaceExam.h"
 #import "SORT.h"
+#import "MutiThred.h"
 
 #pragma - 字符串的mutableCopy方法
 void stringMutableCopy(){
@@ -102,7 +103,9 @@ int main(int argc, const char * argv[]) {
 //        [FaceExam test1];
 //        [FaceExam test2];
 //        [FaceExam test3:"0123456789"]
-        [FaceExam AppendString];
+//        [FaceExam AppendString];
+        MutiThred *mutiThred = [[MutiThred alloc]init];
+        [mutiThred ThredRun];
     }
     return 0;
 }

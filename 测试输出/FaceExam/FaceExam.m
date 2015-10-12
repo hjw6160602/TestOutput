@@ -45,4 +45,13 @@
     }
 }
 
+
++ (id) stringWithCString: (char *)nullTerminatedCString
+                encoding: (NSStringEncoding)encoding{
+    NSString *obj;
+    obj = [self allocWithZone: NSDefaultMallocZone()];
+    obj = [obj initWithCString: nullTerminatedCString encoding: encoding];
+    return obj;
+}
+
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7811EA971BCB56DE00547678 /* MutiThred.m in Sources */ = {isa = PBXBuildFile; fileRef = 7811EA961BCB56DE00547678 /* MutiThred.m */; };
 		788BC4671BC7B7F900D295E1 /* FaceExam.m in Sources */ = {isa = PBXBuildFile; fileRef = 788BC4661BC7B7F900D295E1 /* FaceExam.m */; };
 		78CAE5201B9FCAC2006869CD /* NSString+HexStringFromString.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CAE51F1B9FCAC2006869CD /* NSString+HexStringFromString.m */; };
 		78EE10DB1B05F8B9005D188F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 78EE10DA1B05F8B9005D188F /* main.m */; };
@@ -25,6 +26,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7811EA951BCB56DE00547678 /* MutiThred.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutiThred.h; sourceTree = "<group>"; };
+		7811EA961BCB56DE00547678 /* MutiThred.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MutiThred.m; sourceTree = "<group>"; };
 		78160B101BC8A94B00F39532 /* SORT.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SORT.h; sourceTree = "<group>"; };
 		78160B111BC8A94B00F39532 /* SORT.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SORT.m; sourceTree = "<group>"; };
 		788BC4651BC7B7F900D295E1 /* FaceExam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceExam.h; sourceTree = "<group>"; };
@@ -50,11 +53,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7811EA911BCB560400547678 /* 多线程 */ = {
+			isa = PBXGroup;
+			children = (
+				7811EA951BCB56DE00547678 /* MutiThred.h */,
+				7811EA961BCB56DE00547678 /* MutiThred.m */,
+			);
+			path = "多线程";
+			sourceTree = "<group>";
+		};
 		78160B0F1BC8A94B00F39532 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				78160B101BC8A94B00F39532 /* SORT.h */,
 				78160B111BC8A94B00F39532 /* SORT.m */,
+				7811EA911BCB560400547678 /* 多线程 */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -190,6 +203,7 @@
 			files = (
 				78EE10DB1B05F8B9005D188F /* main.m in Sources */,
 				788BC4671BC7B7F900D295E1 /* FaceExam.m in Sources */,
+				7811EA971BCB56DE00547678 /* MutiThred.m in Sources */,
 				78CAE5201B9FCAC2006869CD /* NSString+HexStringFromString.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,5 +16,5 @@
 + (void)test3:(char *)str1;
 
 + (void)AppendString;
-
++ (id)initWithCString:(char *)nullTerminatedCString encoding: (NSStringEncoding)encoding;
 @end
