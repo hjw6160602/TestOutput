@@ -8,7 +8,6 @@
 
 #import "MutiThred.h"
 
-
 @implementation MutiThred
 
 - (void)ThredRun{
@@ -46,11 +45,9 @@
             int count = self.leftTicketsCount;
             if (count > 0) {
                 // 暂停
-                //                [NSThread sleepForTimeInterval:0.0002];
-                
+                // [NSThread sleepForTimeInterval:0.0002];
                 // 2.票数 - 1
                 self.leftTicketsCount = count - 1;
-                
                 NSThread *current = [NSThread currentThread];
                 NSLog(@"%@ 卖了一张票, 剩余%d张票", current.name, self.leftTicketsCount);
             } else {

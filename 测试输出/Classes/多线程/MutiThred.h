@@ -12,6 +12,7 @@
 
 /** 剩余票数 */
 @property (nonatomic, assign) int leftTicketsCount;
+
 @property (nonatomic, strong) NSThread *thread0;
 @property (nonatomic, strong) NSThread *thread1;
 @property (nonatomic, strong) NSThread *thread2;
