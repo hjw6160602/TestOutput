@@ -104,6 +104,7 @@ int main(int argc, const char * argv[]) {
 //        [FaceExam test2];
 //        [FaceExam test3:"0123456789"]
 //        [FaceExam AppendString];
+        
         MutiThred *mutiThred = [[MutiThred alloc]init];
         [mutiThred ThredRun];
     }

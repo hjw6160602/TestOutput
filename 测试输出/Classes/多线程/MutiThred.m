@@ -30,7 +30,10 @@
     [self.thread0 start];
     [self.thread1 start];
     [self.thread2 start];
+//  主线程睡眠2秒 不然不会执行子线程
+    sleep(2);
 }
+
 
 /**
  * 卖票
