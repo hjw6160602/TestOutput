@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		7811EA971BCB56DE00547678 /* MutiThred.m in Sources */ = {isa = PBXBuildFile; fileRef = 7811EA961BCB56DE00547678 /* MutiThred.m */; };
+		78D0706A1BFEE9A000086769 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D070691BFEE9A000086769 /* Person.m */; };
+		78D0706D1BFEE9AC00086769 /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D0706C1BFEE9AC00086769 /* Room.m */; };
+		78D070701BFEE9B700086769 /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D0706F1BFEE9B700086769 /* Car.m */; };
+		78D070731BFEE9D800086769 /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D070721BFEE9D800086769 /* Dog.m */; };
 		78EE10DB1B05F8B9005D188F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 78EE10DA1B05F8B9005D188F /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +40,15 @@
 		78A2A5F41BCB7E27009D7790 /* FaceExam.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaceExam.m; sourceTree = "<group>"; };
 		78A2A5F71BCB7E27009D7790 /* DateTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateTool.h; sourceTree = "<group>"; };
 		78A2A5F81BCB7E27009D7790 /* DateTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateTool.m; sourceTree = "<group>"; };
+		78D070681BFEE9A000086769 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		78D070691BFEE9A000086769 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		78D0706B1BFEE9AC00086769 /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Room.h; sourceTree = "<group>"; };
+		78D0706C1BFEE9AC00086769 /* Room.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Room.m; sourceTree = "<group>"; };
+		78D0706E1BFEE9B700086769 /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
+		78D0706F1BFEE9B700086769 /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
+		78D070711BFEE9D800086769 /* Dog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
+		78D070721BFEE9D800086769 /* Dog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dog.m; sourceTree = "<group>"; };
+		78D070741BFEEBAB00086769 /* main.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = main.h; path = Classes/main.h; sourceTree = "<group>"; };
 		78EE10D71B05F8B9005D188F /* 测试输出 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "测试输出"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78EE10DA1B05F8B9005D188F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,6 +76,7 @@
 		78160B0F1BC8A94B00F39532 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				78D070671BFEE97500086769 /* 普通对象 */,
 				78A2A5E91BCB7E27009D7790 /* 排序 */,
 				78A2A5EC1BCB7E27009D7790 /* Category */,
 				78A2A5F21BCB7E27009D7790 /* FaceExam */,
@@ -126,6 +140,21 @@
 			path = "DateTool【输出日期】";
 			sourceTree = "<group>";
 		};
+		78D070671BFEE97500086769 /* 普通对象 */ = {
+			isa = PBXGroup;
+			children = (
+				78D070681BFEE9A000086769 /* Person.h */,
+				78D070691BFEE9A000086769 /* Person.m */,
+				78D0706B1BFEE9AC00086769 /* Room.h */,
+				78D0706C1BFEE9AC00086769 /* Room.m */,
+				78D0706E1BFEE9B700086769 /* Car.h */,
+				78D0706F1BFEE9B700086769 /* Car.m */,
+				78D070711BFEE9D800086769 /* Dog.h */,
+				78D070721BFEE9D800086769 /* Dog.m */,
+			);
+			path = "普通对象";
+			sourceTree = "<group>";
+		};
 		78EE10CE1B05F8B9005D188F = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				78160B0F1BC8A94B00F39532 /* Classes */,
+				78D070741BFEEBAB00086769 /* main.h */,
 				78EE10DA1B05F8B9005D188F /* main.m */,
 			);
 			path = "测试输出";
@@ -207,7 +237,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78D070731BFEE9D800086769 /* Dog.m in Sources */,
+				78D070701BFEE9B700086769 /* Car.m in Sources */,
+				78D0706A1BFEE9A000086769 /* Person.m in Sources */,
 				78EE10DB1B05F8B9005D188F /* main.m in Sources */,
+				78D0706D1BFEE9AC00086769 /* Room.m in Sources */,
 				7811EA971BCB56DE00547678 /* MutiThred.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
