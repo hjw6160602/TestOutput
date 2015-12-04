@@ -10,5 +10,7 @@
 @class Room,Car,Dog;
 
 @interface Person : NSObject
-@property (retain) Room *room;
+
+- (void)sleep;
+
 @end

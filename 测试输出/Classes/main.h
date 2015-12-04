@@ -15,6 +15,9 @@
 #import "FaceExam.h"
 #import "SORT.h"
 #import "MutiThred.h"
+#import "Person.h"
+
+
 
 #pragma - 字符串的mutableCopy方法
 //void stringMutableCopy(){
@@ -78,5 +81,22 @@
 //      /** 多线程 */
 //        MutiThred *mutiThred = [[MutiThred alloc]init];
 //        [mutiThred ThredRun];
+
+/*
+void person(){
+    Person *p = [[Person alloc]init];
+    SEL sel1 = @selector(meditation);
+    BOOL flag1 = [p respondsToSelector:sel1];
+    NSLog(@"flag = %i",flag1);
+    
+    SEL sel2 = @selector(test);
+    // respondsToSelector:返回一个BOOL值，代表该对象是否实现了该方法
+    BOOL flag2 = [p respondsToSelector:sel2];
+    NSLog(@"flag = %i",flag2);
+    
+    SEL sel3 = @selector(sleep);
+    
+    [p performSelector:sel3];
+}*/
 
 #endif /* main_h */

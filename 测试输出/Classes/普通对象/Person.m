@@ -11,6 +11,18 @@
 #import "Car.h"
 #import "Dog.h"
 
+@interface Person()
+@property (nonatomic, retain) Room *room;
+@end
+
 @implementation Person
+
+- (void)meditation{
+    NSLog(@"meditation");
+}
+
+- (void)sleep{
+    NSLog(@"sleep");
+}
 
 @end
