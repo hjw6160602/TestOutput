@@ -9,9 +9,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>递归算法.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>78C02D711C15271C009E18B9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>78EE10D61B05F8B9005D188F</key>
 		<dict>
 			<key>primary</key>
