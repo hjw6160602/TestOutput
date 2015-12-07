@@ -7,8 +7,10 @@
 //
 
 #include <iostream>
-using namespace std;
+#include <fstream>
 
+using namespace std;
+ofstream outputFile;
 /**
  * @strut  保存数据的链表结构体
  *
@@ -84,9 +86,13 @@ void trace2TheSource(ListNode *node, int target){
         node = lastNode;
         if (node->last) {
             printf(" + %d",node->number);
+            outputFile<<" + "<<node->number;
             trace2TheSource(node, target);
         }
-        else printf(" = %d\n", target);
+        else {
+            printf(" = %d\n", target);
+            outputFile<<" = "<<target<<endl;
+        }
     }
     else printf("回溯结束！");
 }
@@ -118,9 +124,9 @@ void Recursion(int min, int max, int times, int time, int *array, int count, int
         if (sum == target) {
             if (time == times) {
                 printf("%d个数相加情况: %d",times+1,node.number);
+                outputFile<<times+1<<"个数相加情况: "<<node.number;
                 //遍历列表，从树叶->树根的顺数找出递归路径，输出所有数字
                 trace2TheSource(&node,target);
-//                printf("%d个数: %d,%d\n",times+1, last, integer);
             }
             sum -=  node.number;
             continue;
@@ -168,20 +174,30 @@ void sortArray(int *array,int count){
     
 }
 
-/** 初始化数据 */
+/** 主函数 */
 void Caculate(){
     // 1.初始化数据
-    int target = 110;
-    int a[] = {88,65,78,45,22,86,89,48,55};
-    int count = sizeof(a)/sizeof(a[0]);
+    
+    ifstream inputFile("C:\\Users\\Snow\\Desktop\\input.txt");
+    int data[1000]; //用于保存读取出来的数字的数组
+    int count = 0;
+    
+    while (inputFile>>data[count]) //将inf文件中的数字读取到data数组中
+        count++;
+    inputFile.close(); //读取完毕后,关闭文件
+    
+    count--;//数组中最后一个数为总和
+    
+    int target = data[count];
+    
     printf("原始数组内的数据为：\n");
-    printArray(a, count);
+    printArray(data, count);
     
     // 2.对数组进行排序
-    sortArray(a,count);
+    sortArray(data,count);
     
     // 3.主算法
-    Example(target, a, count);
+    Example(target, data, count);
     printf("固定和：%d\n",target);
     
     // 初始化链表,头结点
@@ -191,12 +207,13 @@ void Caculate(){
     
     // 最少是两个数相加，最多的时候是所有的数字相加
     for (int k=1; k < count; k++) {
-        Recursion(0, count-k, k, 0, a, count, 0, target, &header);
+        Recursion(0, count-k, k, 0, data, count, 0, target, &header);
     }
 }
 
 int main(int argc, const char * argv[]) {
+    outputFile.open("C:\\Users\\Snow\\Desktop\\output.txt"); //创建一个文件
     Caculate();
-    cout << "算法结束！\n";
+    outputFile.close();
     return 0;
 }
