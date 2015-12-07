@@ -7,10 +7,17 @@
 //
 
 #include <iostream>
+using namespace std;
 
-struct numbers{
+/**
+ * @strut  保存数据的链表结构体
+ *
+ * @param  number : 保存数字本身
+ *         next   : 保存下一个数据的地址
+ */
+struct ListNode{
     int number;
-    int *next;
+    ListNode *last;
 };
 
 /**
@@ -63,6 +70,28 @@ void Example(int sum, int *array,int count){
 }
 
 /**
+ * @func   回溯找出递归路径
+ *
+ * @param  指向ListNode类型的指针
+ *
+ * @note   知道回溯到头结点
+ */
+void trace2TheSource(ListNode *node, int target){
+    //当不为头节点
+    if (node->last) {
+        //打印当前数字
+        ListNode *lastNode = node->last;
+        node = lastNode;
+        if (node->last) {
+            printf(" + %d",node->number);
+            trace2TheSource(node, target);
+        }
+        else printf(" = %d\n", target);
+    }
+    else printf("回溯结束！");
+}
+
+/**
  * @func   给定一个固定数,再给定一些数,找到这些数字中哪些数字可以组成这个总和
  *
  * @param  min          : 当前递归深度下的 数组最小下标取值
@@ -73,36 +102,41 @@ void Example(int sum, int *array,int count){
  *         count        : 数组的个数
  *         sum          : 当前递归已经加出来的和
  *         target       : 目标总和
- *
+ *         list         : 递归路径记录链表
  * @note
  */
-void Recursion(int min, int max, int times, int time, int *array, int count, int sum, int target){
+void Recursion(int min, int max, int times, int time, int *array, int count, int sum, int target, ListNode *list){
     for (int i = min; i < max; i++) {
-        // 取出当前index的数
-        int last = sum;
-        int integer = array[i];
+        // 新建一个node节点,取出当前index的数
+        ListNode node;
+        node.number =array[i];
+        node.last = list;
+        
         // 计算加到当前位置为止的总和
-        sum += integer;
+        sum +=  node.number;
         
         if (sum == target) {
             if (time == times) {
-                printf("%d个数: %d,%d\n",times+1, last, integer);
+                printf("%d个数相加情况: %d",times+1,node.number);
+                //遍历列表，从树叶->树根的顺数找出递归路径，输出所有数字
+                trace2TheSource(&node,target);
+//                printf("%d个数: %d,%d\n",times+1, last, integer);
             }
-            sum -= integer;
+            sum -=  node.number;
             continue;
         }
         else if (sum < target){
             if (max+1 <= count) {
-                Recursion(i+1, max+1, times, time+1, array, count, sum, target);
-                sum -= integer;
+                Recursion(i+1, max+1, times, time+1, array, count, sum, target, &node);
+                sum -=  node.number;
             }
             else{
-                sum -= integer;
+                sum -=  node.number;
                 continue;
             }
         }
         else if (sum > target){
-            sum -= integer;
+            sum -=  node.number;
             return;
         }
     }
@@ -140,27 +174,29 @@ void Caculate(){
     int target = 110;
     int a[] = {88,65,78,45,22,86,89,48,55};
     int count = sizeof(a)/sizeof(a[0]);
-    
     printf("原始数组内的数据为：\n");
     printArray(a, count);
+    
     // 2.对数组进行排序
     sortArray(a,count);
-    //    // 3.主算法
-    Example(target, a, count);
     
-    //    printf("原始数组内的数据为：\n");
-    //    printArray(a, count);
+    // 3.主算法
+    Example(target, a, count);
     printf("固定和：%d\n",target);
+    
+    // 初始化链表,头结点
+    ListNode header;
+    header.number = 0;
+    header.last = NULL;
     
     // 最少是两个数相加，最多的时候是所有的数字相加
     for (int k=1; k < count; k++) {
-        Recursion(0, count-k, k, 0, a, count, 0, target);
+        Recursion(0, count-k, k, 0, a, count, 0, target, &header);
     }
 }
 
 int main(int argc, const char * argv[]) {
     Caculate();
-    std::cout << "Hello, World!\n";
+    cout << "算法结束！\n";
     return 0;
-
 }
