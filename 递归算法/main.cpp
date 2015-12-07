@@ -42,10 +42,10 @@ void trace2TheSource(ListNode *node, long sum, long target){
         ListNode *lastNode = node->last;
         node = lastNode;
         if (node->last) {
-            double number = node->number;
+            double number = node->number/100.00;
 //            printf("%.2f,",number);
             printf(" + %.2f",number);
-            outputFile<<node->number<<endl;
+            outputFile<<number<<endl;
             trace2TheSource(node, sum, target);
         }
         else {
