@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7811EA971BCB56DE00547678 /* MutiThred.m in Sources */ = {isa = PBXBuildFile; fileRef = 7811EA961BCB56DE00547678 /* MutiThred.m */; };
+		7885B0681C157CF500995F3A /* Example.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7885B0661C157CF500995F3A /* Example.cpp */; };
 		78C02D751C15271C009E18B9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78C02D741C15271C009E18B9 /* main.cpp */; };
 		78D0706A1BFEE9A000086769 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D070691BFEE9A000086769 /* Person.m */; };
 		78D0706D1BFEE9AC00086769 /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D0706C1BFEE9AC00086769 /* Room.m */; };
@@ -41,6 +42,8 @@
 /* Begin PBXFileReference section */
 		7811EA951BCB56DE00547678 /* MutiThred.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutiThred.h; sourceTree = "<group>"; };
 		7811EA961BCB56DE00547678 /* MutiThred.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MutiThred.m; sourceTree = "<group>"; };
+		7885B0661C157CF500995F3A /* Example.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Example.cpp; sourceTree = "<group>"; };
+		7885B0671C157CF500995F3A /* Example.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Example.hpp; sourceTree = "<group>"; };
 		78A2A5EA1BCB7E27009D7790 /* SORT.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SORT.h; sourceTree = "<group>"; };
 		78A2A5EB1BCB7E27009D7790 /* SORT.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SORT.m; sourceTree = "<group>"; };
 		78A2A5EE1BCB7E27009D7790 /* NSString+GBLength.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+GBLength.h"; sourceTree = "<group>"; };
@@ -169,6 +172,8 @@
 			isa = PBXGroup;
 			children = (
 				78C02D791C153084009E18B9 /* 输入输出 */,
+				7885B0671C157CF500995F3A /* Example.hpp */,
+				7885B0661C157CF500995F3A /* Example.cpp */,
 				78C02D741C15271C009E18B9 /* main.cpp */,
 			);
 			path = "递归算法";
@@ -312,6 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7885B0681C157CF500995F3A /* Example.cpp in Sources */,
 				78C02D751C15271C009E18B9 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -453,6 +459,7 @@
 				78C02D771C15271C009E18B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		78EE10D21B05F8B9005D188F /* Build configuration list for PBXProject "测试输出" */ = {
 			isa = XCConfigurationList;

@@ -9,6 +9,12 @@
 #include <iostream>
 #include <fstream>
 
+#define MAC_PATH_I "./input.txt"
+#define MAC_PATH_O "./output.txt"
+
+#define WIN_PATH_I "C:\\Users\\Snow\\Desktop\\input.txt"
+#define WIN_PATH_O "C:\\Users\\Snow\\Desktop\\output.txt"
+
 using namespace std;
 ofstream outputFile;
 /**
@@ -18,58 +24,9 @@ ofstream outputFile;
  *         next   : 保存下一个数据的地址
  */
 struct ListNode{
-    int number;
+    long number;
     ListNode *last;
 };
-
-/**
- * @func   给定一些数,再给定一个总和,找到这些数字中,哪些数字可以组成这个总和
- *
- * @param  sum:   其中某几个数字的总和
- *         array: 所有的数字
- *
- * @return 打印组成这个和的所有数字
- *
- * @note   考虑所有的可能性组合
- */
-void Example(int sum, int *array,int count){
-    int a=0, b=0, c=0, d=0;
-    //2个数相加的情况
-    for (int j=0; j<count-1; j++) {
-        a = array[j];
-        for (int k=j+1; k<count; k++) {
-            b = array[k];
-            if (a+b == sum)
-                printf("2个数相加情况：%d + %d = %d \n",a,b,sum);
-        }
-    }
-    //3个数相加的情况
-    for (int i=0; i<count-2; i++) {
-        a = array[i]; // 取出当前的数目
-        for (int j=i+1; j<count-1; j++) {
-            b = array[j]; // 取出当前的数目
-            for (int k=j+1; k<count; k++) {
-                c = array[k]; // 取出当前的数目
-                if (a+b+c == sum)
-                    printf("3个数相加情况：%d + %d + %d = %d \n",a,b,c,sum);
-            }
-        }
-    }
-    //4个数相加的情况
-    for (int i=0; i<count-3; i++) {
-        a = array[i]; // 取出当前的数目
-        for (int j=i+1; j<count-2; j++) {
-            b = array[j]; // 取出当前的数目
-            for (int k=j+1; k<count-1; k++) {
-                c = array[k]; // 取出当前的数目
-                for (int l=k+1; l<count; l++)
-                    d = array[l];
-                if (a+b+c+d == sum)
-                    printf("4个数相加情况：%d + %d + %d + %d = %d \n",a,b,c,d,sum);
-            }
-        }
-    }
-}
 
 /**
  * @func   回溯找出递归路径
@@ -78,20 +35,23 @@ void Example(int sum, int *array,int count){
  *
  * @note   知道回溯到头结点
  */
-void trace2TheSource(ListNode *node, int target){
+void trace2TheSource(ListNode *node, long sum, long target){
     //当不为头节点
     if (node->last) {
         //打印当前数字
         ListNode *lastNode = node->last;
         node = lastNode;
         if (node->last) {
-            printf(" + %d",node->number);
-            outputFile<<" + "<<node->number;
-            trace2TheSource(node, target);
+            double number = node->number;
+//            printf("%.2f,",number);
+            printf(" + %.2f",number);
+            outputFile<<node->number<<endl;
+            trace2TheSource(node, sum, target);
         }
         else {
-            printf(" = %d\n", target);
-            outputFile<<" = "<<target<<endl;
+            double number = sum/100.00;
+            printf(" = %.2f\n", number);
+            outputFile<<"总和："<<number<<endl;
         }
     }
     else printf("回溯结束！");
@@ -111,7 +71,7 @@ void trace2TheSource(ListNode *node, int target){
  *         list         : 递归路径记录链表
  * @note
  */
-void Recursion(int min, int max, int times, int time, int *array, int count, int sum, int target, ListNode *list){
+void Recursion(int min, int max, int times, int time, long *array, int count, long sum, long target, ListNode *list){
     for (int i = min; i < max; i++) {
         // 新建一个node节点,取出当前index的数
         ListNode node;
@@ -120,17 +80,39 @@ void Recursion(int min, int max, int times, int time, int *array, int count, int
         
         // 计算加到当前位置为止的总和
         sum +=  node.number;
+        long x = 0;
+        if (sum<0)
+            x = abs(target + sum);
+        else x = abs(target- sum);
         
-        if (sum == target) {
+        if (x < 3) {
             if (time == times) {
-                printf("%d个数相加情况: %d",times+1,node.number);
-                outputFile<<times+1<<"个数相加情况: "<<node.number;
+                printf("%d个数相加情况:\n",times+1);
+                double number1 = sum/100.00;
+                double number2 = target/100.00;
+                printf("sum : %.2f,   target : %.2f\n",number1,number2);
+                
+                double number3 = node.number/100.00;
+                printf("%.2f",number3);
+                
+                outputFile<<times+1<<"个数相加情况: "<<endl<<number3<<endl;
                 //遍历列表，从树叶->树根的顺数找出递归路径，输出所有数字
-                trace2TheSource(&node,target);
+                trace2TheSource(&node, sum, target);
             }
             sum -=  node.number;
             continue;
         }
+//        if (sum == target) {
+//            if (time == times) {
+//                double number = node.number/100.00;
+//                printf("%d个数相加情况: %.2f",times+1,number);
+//                outputFile<<times+1<<"个数相加情况: "<<endl<<number<<endl;
+//                //遍历列表，从树叶->树根的顺数找出递归路径，输出所有数字
+//                trace2TheSource(&node,target);
+//            }
+//            sum -=  node.number;
+//            continue;
+//        }
         else if (sum < target){
             if (max+1 <= count) {
                 Recursion(i+1, max+1, times, time+1, array, count, sum, target, &node);
@@ -150,16 +132,17 @@ void Recursion(int min, int max, int times, int time, int *array, int count, int
 
 
 /** 打印数组内的元素 */
-void printArray(int *array,int count){
+void printArray(long *array,int count){
     for (int i=0; i<count; i++) {
-        printf("%d,",array[i]);
+        double number = array[i]/100.00;
+        printf("%.2f, ",number);
     }
     printf("\n");
 }
 
 /** 对数组进行排序 */
-void sortArray(int *array,int count){
-    int temp;
+void sortArray(long *array,int count){
+    long temp;
     //此处采用选择排序
     for(int i=0; i<count-1; i++){
         for(int j=i+1; j<count; j++)
@@ -178,18 +161,23 @@ void sortArray(int *array,int count){
 void Caculate(){
     // 1.初始化数据
     
-    ifstream inputFile("C:\\Users\\Snow\\Desktop\\input.txt");
-    int data[1000]; //用于保存读取出来的数字的数组
+    ifstream inputFile(MAC_PATH_I);
+    long data[1000]; //用于保存读取出来的数字的数组
     int count = 0;
-    
-    while (inputFile>>data[count]) //将inf文件中的数字读取到data数组中
+    while (!inputFile.eof()) {//将inf文件中的数字读取到data数组中
+        double number;
+        inputFile>>number;
+        long y = number * 100;
+        data[count] = y;
+//        printf("%ld,",data[count]);
         count++;
+    }
     inputFile.close(); //读取完毕后,关闭文件
     
     count--;//数组中最后一个数为总和
     
-    int target = data[count];
-    
+    long target = data[count];
+
     printf("原始数组内的数据为：\n");
     printArray(data, count);
     
@@ -197,8 +185,8 @@ void Caculate(){
     sortArray(data,count);
     
     // 3.主算法
-    Example(target, data, count);
-    printf("固定和：%d\n",target);
+    double number = target/100.00;
+    printf("固定和：%.2f\n",number);
     
     // 初始化链表,头结点
     ListNode header;
@@ -206,13 +194,14 @@ void Caculate(){
     header.last = NULL;
     
     // 最少是两个数相加，最多的时候是所有的数字相加
-    for (int k=1; k < count; k++) {
+//    for (int k=1; k < count; k++) {
+    for (int k=12; k <= 12; k++) {
         Recursion(0, count-k, k, 0, data, count, 0, target, &header);
     }
 }
 
 int main(int argc, const char * argv[]) {
-    outputFile.open("C:\\Users\\Snow\\Desktop\\output.txt"); //创建一个文件
+    outputFile.open(MAC_PATH_O); //创建一个文件
     Caculate();
     outputFile.close();
     return 0;
