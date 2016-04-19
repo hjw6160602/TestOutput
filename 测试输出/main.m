@@ -32,9 +32,13 @@ void DeleteMutableString(){
 //    NSLog(@"%@",a);
 }
 
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        DeleteMutableString();
+        int x;
+        x+=5;
+        NSLog(@"%d",x);
+//        DeleteMutableString();
     }
     return 0;
 }
