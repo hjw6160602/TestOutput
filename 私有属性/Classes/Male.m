@@ -13,8 +13,8 @@
 
 - (void)test{
     Person *p = [[Person alloc] init];
-    p->_Face;
-    p->_Money;
+//    p->_Face;
+//    p->_Money;
 }
 
 @end

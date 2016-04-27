@@ -21,7 +21,7 @@
     NSString *_Size;
 }
 
-//@property (nonatomic, strong) NSString *Face;
+@property (nonatomic, strong) NSString *Other;
 //
 //@protected
 //@property (nonatomic, strong) NSString *Face;
