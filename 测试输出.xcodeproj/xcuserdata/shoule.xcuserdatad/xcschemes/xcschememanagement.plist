@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Swift中的单例.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>测试输出.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -33,6 +38,11 @@
 			<true/>
 		</dict>
 		<key>78EE10D61B05F8B9005D188F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>78F8E4F71CD3382100C24536</key>
 		<dict>
 			<key>primary</key>
 			<true/>
