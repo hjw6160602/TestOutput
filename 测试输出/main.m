@@ -23,6 +23,19 @@ void replaceCharacter(){
     NSLog(@"%@",text);
 }
 
+void Charter2Integer(){
+    NSString *text = @"sdf";
+    NSInteger index = text.integerValue;
+    NSLog(@"%ld",index);
+}
+
+void testFace(){
+    int nums[4] = {10,20,30,40};
+    int *p1 = nums;
+    p1 = p1 + 1;
+    p1--;
+    printf(" %d\n\n ", *p1);
+}
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
