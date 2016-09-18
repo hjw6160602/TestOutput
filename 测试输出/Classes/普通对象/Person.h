@@ -9,8 +9,14 @@
 #import <Foundation/Foundation.h>
 @class Room,Car,Dog;
 
-@interface Person : NSObject
+@interface Person : NSObject{
+    @public
+    NSString *_foo;
+}
+@property (nonatomic, copy) NSString *foo;
 
 - (void)sleep;
+
+- (void)eat;
 
 @end

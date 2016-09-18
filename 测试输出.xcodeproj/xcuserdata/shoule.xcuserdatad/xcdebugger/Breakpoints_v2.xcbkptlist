@@ -9,22 +9,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "&#x6d4b;&#x8bd5;&#x8f93;&#x51fa;/Classes/&#x666e;&#x901a;&#x5bf9;&#x8c61;/Person.m"
-            timestampString = "470112424.660509"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "-sleep"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "&#x6d4b;&#x8bd5;&#x8f93;&#x51fa;/Classes/Category/NSString/NSString+GBLength.m"
             timestampString = "483435341.37448"
             startingColumnNumber = "9223372036854775807"

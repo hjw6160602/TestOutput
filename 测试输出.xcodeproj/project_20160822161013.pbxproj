@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7811EA971BCB56DE00547678 /* MutiThred.m in Sources */ = {isa = PBXBuildFile; fileRef = 7811EA961BCB56DE00547678 /* MutiThred.m */; };
 		7885B0681C157CF500995F3A /* Example.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7885B0661C157CF500995F3A /* Example.cpp */; };
+		78864A7E1D52DD63009CE26D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78864A7D1D52DD63009CE26D /* main.cpp */; };
+		78864A851D52DDFF009CE26D /* CombineArr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78864A841D52DDFF009CE26D /* CombineArr.cpp */; };
 		789832891CC624A2004C2826 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 789832881CC624A2004C2826 /* main.m */; };
 		789832901CC6250C004C2826 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 7898328F1CC6250C004C2826 /* Person.m */; };
 		789832931CC6262E004C2826 /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 789832921CC6262E004C2826 /* Car.m */; };
@@ -18,6 +20,7 @@
 		78D0706D1BFEE9AC00086769 /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D0706C1BFEE9AC00086769 /* Room.m */; };
 		78D070701BFEE9B700086769 /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D0706F1BFEE9B700086769 /* Car.m */; };
 		78D070731BFEE9D800086769 /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D070721BFEE9D800086769 /* Dog.m */; };
+		78DA44711D5437B20022D623 /* InvertInteger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78DA446F1D5437B20022D623 /* InvertInteger.cpp */; };
 		78E4FD641C113BAF0096C5F5 /* Plugins.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E4FD631C113BAF0096C5F5 /* Plugins.m */; };
 		78EDC1701CD0A014000E1236 /* SubStringToIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 78EDC16F1CD0A014000E1236 /* SubStringToIndex.m */; };
 		78EDC1941CD0BFB7000E1236 /* TimeZone.m in Sources */ = {isa = PBXBuildFile; fileRef = 78EDC1931CD0BFB7000E1236 /* TimeZone.m */; };
@@ -38,6 +41,15 @@
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 		7829AF9A1D0119F200B1B538 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		78864A791D52DD63009CE26D /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -91,6 +103,10 @@
 		7829AF9C1D0119F200B1B538 /* MRC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MRC; sourceTree = BUILT_PRODUCTS_DIR; };
 		7885B0661C157CF500995F3A /* Example.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Example.cpp; sourceTree = "<group>"; };
 		7885B0671C157CF500995F3A /* Example.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Example.hpp; sourceTree = "<group>"; };
+		78864A7B1D52DD63009CE26D /* 算法题 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "算法题"; sourceTree = BUILT_PRODUCTS_DIR; };
+		78864A7D1D52DD63009CE26D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		78864A841D52DDFF009CE26D /* CombineArr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CombineArr.cpp; sourceTree = "<group>"; };
+		78864A861D52DE1E009CE26D /* CombineArr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CombineArr.h; sourceTree = "<group>"; };
 		789832861CC624A2004C2826 /* 私有属性 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "私有属性"; sourceTree = BUILT_PRODUCTS_DIR; };
 		789832881CC624A2004C2826 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7898328E1CC6250C004C2826 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
@@ -122,6 +138,8 @@
 		78D070711BFEE9D800086769 /* Dog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
 		78D070721BFEE9D800086769 /* Dog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dog.m; sourceTree = "<group>"; };
 		78D070741BFEEBAB00086769 /* main.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = main.h; path = Classes/main.h; sourceTree = "<group>"; };
+		78DA446F1D5437B20022D623 /* InvertInteger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InvertInteger.cpp; sourceTree = "<group>"; };
+		78DA44701D5437B20022D623 /* InvertInteger.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = InvertInteger.hpp; sourceTree = "<group>"; };
 		78E4FD621C113BAF0096C5F5 /* Plugins.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plugins.h; sourceTree = "<group>"; };
 		78E4FD631C113BAF0096C5F5 /* Plugins.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Plugins.m; sourceTree = "<group>"; };
 		78EDC16E1CD0A014000E1236 /* SubStringToIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubStringToIndex.h; sourceTree = "<group>"; };
@@ -145,6 +163,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		7829AF991D0119F200B1B538 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78864A781D52DD63009CE26D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -205,6 +230,34 @@
 				78EDC16D1CD0A000000E1236 /* NSString */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		78864A7C1D52DD63009CE26D /* 算法题 */ = {
+			isa = PBXGroup;
+			children = (
+				78864A821D52DDA5009CE26D /* 两个排序数组合并 */,
+				78864A831D52DDA5009CE26D /* 整数反转 */,
+				78864A7D1D52DD63009CE26D /* main.cpp */,
+			);
+			path = "算法题";
+			sourceTree = "<group>";
+		};
+		78864A821D52DDA5009CE26D /* 两个排序数组合并 */ = {
+			isa = PBXGroup;
+			children = (
+				78864A861D52DE1E009CE26D /* CombineArr.h */,
+				78864A841D52DDFF009CE26D /* CombineArr.cpp */,
+			);
+			path = "两个排序数组合并";
+			sourceTree = "<group>";
+		};
+		78864A831D52DDA5009CE26D /* 整数反转 */ = {
+			isa = PBXGroup;
+			children = (
+				78DA44701D5437B20022D623 /* InvertInteger.hpp */,
+				78DA446F1D5437B20022D623 /* InvertInteger.cpp */,
+			);
+			path = "整数反转";
 			sourceTree = "<group>";
 		};
 		789832871CC624A2004C2826 /* 私有属性 */ = {
@@ -352,6 +405,7 @@
 				78C02D731C15271C009E18B9 /* 递归算法 */,
 				789832871CC624A2004C2826 /* 私有属性 */,
 				78F8E4F91CD3382100C24536 /* Swift中的单例 */,
+				78864A7C1D52DD63009CE26D /* 算法题 */,
 				78EE10D81B05F8B9005D188F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -365,6 +419,7 @@
 				78F8E4F81CD3382100C24536 /* Swift中的单例 */,
 				7829AF911D0119C900B1B538 /* 非ARC开发 */,
 				7829AF9C1D0119F200B1B538 /* MRC */,
+				78864A7B1D52DD63009CE26D /* 算法题 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -432,6 +487,23 @@
 			name = MRC;
 			productName = MRC;
 			productReference = 7829AF9C1D0119F200B1B538 /* MRC */;
+			productType = "com.apple.product-type.tool";
+		};
+		78864A7A1D52DD63009CE26D /* 算法题 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78864A811D52DD63009CE26D /* Build configuration list for PBXNativeTarget "算法题" */;
+			buildPhases = (
+				78864A771D52DD63009CE26D /* Sources */,
+				78864A781D52DD63009CE26D /* Frameworks */,
+				78864A791D52DD63009CE26D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "算法题";
+			productName = "算法题";
+			productReference = 78864A7B1D52DD63009CE26D /* 算法题 */;
 			productType = "com.apple.product-type.tool";
 		};
 		789832851CC624A2004C2826 /* 私有属性 */ = {
@@ -518,6 +590,9 @@
 					7829AF9B1D0119F200B1B538 = {
 						CreatedOnToolsVersion = 7.2;
 					};
+					78864A7A1D52DD63009CE26D = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
 					789832851CC624A2004C2826 = {
 						CreatedOnToolsVersion = 7.2;
 					};
@@ -550,6 +625,7 @@
 				78F8E4F71CD3382100C24536 /* Swift中的单例 */,
 				7829AF901D0119C900B1B538 /* 非ARC开发 */,
 				7829AF9B1D0119F200B1B538 /* MRC */,
+				78864A7A1D52DD63009CE26D /* 算法题 */,
 			);
 		};
 /* End PBXProject section */
@@ -566,6 +642,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78864A771D52DD63009CE26D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78864A7E1D52DD63009CE26D /* main.cpp in Sources */,
+				78DA44711D5437B20022D623 /* InvertInteger.cpp in Sources */,
+				78864A851D52DDFF009CE26D /* CombineArr.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -651,6 +737,28 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		78864A7F1D52DD63009CE26D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "-";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		78864A801D52DD63009CE26D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "-";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -812,6 +920,7 @@
 				7829AF961D0119C900B1B538 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7829AFA01D0119F200B1B538 /* Build configuration list for PBXNativeTarget "MRC" */ = {
 			isa = XCConfigurationList;
@@ -820,6 +929,16 @@
 				7829AFA21D0119F200B1B538 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78864A811D52DD63009CE26D /* Build configuration list for PBXNativeTarget "算法题" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78864A7F1D52DD63009CE26D /* Debug */,
+				78864A801D52DD63009CE26D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7898328C1CC624A2004C2826 /* Build configuration list for PBXNativeTarget "私有属性" */ = {
 			isa = XCConfigurationList;

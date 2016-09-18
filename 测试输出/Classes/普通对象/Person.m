@@ -17,6 +17,14 @@
 
 @implementation Person
 
+- (void)eat{
+    [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(fire) userInfo:nil repeats:YES];
+}
+
+- (void)fire{
+    NSLog(@"吃..");
+}
+
 - (void)meditation{
     NSLog(@"meditation");
 }

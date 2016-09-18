@@ -24,6 +24,11 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>算法题.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
 		<key>递归算法.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -43,6 +48,11 @@
 			<true/>
 		</dict>
 		<key>7829AF9B1D0119F200B1B538</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>78864A7A1D52DD63009CE26D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
