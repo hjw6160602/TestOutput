@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7811EA971BCB56DE00547678 /* MutiThred.m in Sources */ = {isa = PBXBuildFile; fileRef = 7811EA961BCB56DE00547678 /* MutiThred.m */; };
+		781EC5EB1DACAD260071BDAB /* NetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 781EC5EA1DACAD260071BDAB /* NetworkTool.m */; };
 		7885B0681C157CF500995F3A /* Example.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7885B0661C157CF500995F3A /* Example.cpp */; };
 		789832891CC624A2004C2826 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 789832881CC624A2004C2826 /* main.m */; };
 		789832901CC6250C004C2826 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 7898328F1CC6250C004C2826 /* Person.m */; };
@@ -87,6 +88,8 @@
 /* Begin PBXFileReference section */
 		7811EA951BCB56DE00547678 /* MutiThred.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutiThred.h; sourceTree = "<group>"; };
 		7811EA961BCB56DE00547678 /* MutiThred.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MutiThred.m; sourceTree = "<group>"; };
+		781EC5E91DACAD260071BDAB /* NetworkTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkTool.h; sourceTree = "<group>"; };
+		781EC5EA1DACAD260071BDAB /* NetworkTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkTool.m; sourceTree = "<group>"; };
 		7829AF911D0119C900B1B538 /* 非ARC开发 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "非ARC开发"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7829AF9C1D0119F200B1B538 /* MRC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MRC; sourceTree = BUILT_PRODUCTS_DIR; };
 		7885B0661C157CF500995F3A /* Example.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Example.cpp; sourceTree = "<group>"; };
@@ -314,6 +317,8 @@
 				78D0706F1BFEE9B700086769 /* Car.m */,
 				78D070711BFEE9D800086769 /* Dog.h */,
 				78D070721BFEE9D800086769 /* Dog.m */,
+				781EC5E91DACAD260071BDAB /* NetworkTool.h */,
+				781EC5EA1DACAD260071BDAB /* NetworkTool.m */,
 			);
 			path = "普通对象";
 			sourceTree = "<group>";
@@ -593,6 +598,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				781EC5EB1DACAD260071BDAB /* NetworkTool.m in Sources */,
 				78D070731BFEE9D800086769 /* Dog.m in Sources */,
 				78EDC1701CD0A014000E1236 /* SubStringToIndex.m in Sources */,
 				78E4FD641C113BAF0096C5F5 /* Plugins.m in Sources */,
@@ -812,6 +818,7 @@
 				7829AF961D0119C900B1B538 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7829AFA01D0119F200B1B538 /* Build configuration list for PBXNativeTarget "MRC" */ = {
 			isa = XCConfigurationList;
@@ -820,6 +827,7 @@
 				7829AFA21D0119F200B1B538 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7898328C1CC624A2004C2826 /* Build configuration list for PBXNativeTarget "私有属性" */ = {
 			isa = XCConfigurationList;

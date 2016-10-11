@@ -9,11 +9,18 @@
 #import <Foundation/Foundation.h>
 @class Room,Car,Dog;
 
-@interface Person : NSObject{
-    @public
-    NSString *_foo;
+@protocol PersonDelegate
+
+@property (nonatomic, assign)int Sincerity;
+
+@end
+
+@interface Person : NSObject <PersonDelegate>{
+//    @public
+//    NSString *_foo;
 }
-@property (nonatomic, copy) NSString *foo;
+
+@property (nonatomic, copy, readonly) NSString *foo;
 
 - (void)sleep;
 

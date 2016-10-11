@@ -9,5 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @interface Dog : NSObject
+{
+    @public
+    int _age;
+    NSString *_name;
+}
+@property (nonatomic, copy, readonly) NSString *foo;
 
 @end
