@@ -9,7 +9,7 @@
 #include <iostream>
 #include <fstream>
 
-#define MAC_PATH_I "./input.txt"
+#define MAC_PATH_I "./input2.txt"
 #define MAC_PATH_O "./output.txt"
 
 #define WIN_PATH_I "C:\\Users\\Snow\\Desktop\\input.txt"
@@ -87,12 +87,13 @@ void Recursion(int min, int max, int times, int time, long *array, int count, lo
         
         if (x < 3) {
             if (time == times) {
-                printf("%d个数相加情况:\n",times+1);
+                
                 double number1 = sum/100.00;
                 double number2 = target/100.00;
-                printf("sum : %.2f,   target : %.2f\n",number1,number2);
-                
                 double number3 = node.number/100.00;
+                
+                printf("%d个数相加情况:\n",times+1);
+                printf("sum : %.2f,   target : %.2f\n",number1,number2);
                 printf("%.2f",number3);
                 
                 outputFile<<times+1<<"个数相加情况: "<<endl<<number3<<endl;
@@ -161,9 +162,14 @@ void sortArray(long *array,int count){
 void Caculate(){
     // 1.初始化数据
     
-    ifstream inputFile(MAC_PATH_I);
+    ifstream inputFile("/Users/SaiDiCaprio/Desktop/input2.txt");
     long data[1000]; //用于保存读取出来的数字的数组
     int count = 0;
+    if(!inputFile){
+        printf("文件路径不对！");
+        return;
+    }
+        
     while (!inputFile.eof()) {//将inf文件中的数字读取到data数组中
         double number;
         inputFile>>number;
@@ -195,13 +201,13 @@ void Caculate(){
     
     // 最少是两个数相加，最多的时候是所有的数字相加
 //    for (int k=1; k < count; k++) {
-    for (int k=12; k <= 12; k++) {
+    for (int k=3; k <= 10; k++) {
         Recursion(0, count-k, k, 0, data, count, 0, target, &header);
     }
 }
 
 int main(int argc, const char * argv[]) {
-    outputFile.open(MAC_PATH_O); //创建一个文件
+    outputFile.open("/Users/SaiDiCaprio/Desktop/output.txt"); //创建一个文件
     Caculate();
     outputFile.close();
     return 0;
